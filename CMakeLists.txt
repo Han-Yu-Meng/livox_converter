@@ -1,13 +1,10 @@
 cmake_minimum_required(VERSION 3.14)
-project(livox_convertor LANGUAGES CXX)
+project(livox_convertor LANGUAGES CXX C)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(livox_ros_driver2 REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(sensor_msgs REQUIRED)
-find_package(pcl_conversions REQUIRED)
 find_package(livox_msg REQUIRED)
 
 fins_add_node(${PROJECT_NAME} SHARED 
@@ -23,7 +20,5 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
 )
 
 fins_link_ros_dependencies(${PROJECT_NAME}
-  std_msgs
-  sensor_msgs
   livox_ros_driver2
 )
