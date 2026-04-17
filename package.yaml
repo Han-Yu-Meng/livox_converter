@@ -5,7 +5,6 @@ maintainers:
   - name: "fins"
     email: "fins@sjtu.edu.cn"
 depends:
-  livox_ros_driver2: "system"
   livox_msg: "1.0.1"
 
 recipes:
